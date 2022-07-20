@@ -22,9 +22,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             animator.SetBool("run", true);
-            Debug.Log("aassaa");
-            Debug.Log("aassaa");
-            Debug.Log("Test2");
         }
         else if (hor < 0)
         {
