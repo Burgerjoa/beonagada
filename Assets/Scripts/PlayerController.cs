@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("run", true);
             Debug.Log("aassaa");
             Debug.Log("aassaa");
+            Debug.Log("Test2");
         }
         else if (hor < 0)
         {
