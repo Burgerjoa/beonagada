@@ -7,6 +7,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game_manage/DSLManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game_play/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -68,7 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1658295489754</updated>
       <workItem from="1658295494738" duration="263000" />
-      <workItem from="1658295914643" duration="325000" />
+      <workItem from="1658295914643" duration="3167000" />
+      <workItem from="1658340770082" duration="1021000" />
     </task>
     <servers />
   </component>

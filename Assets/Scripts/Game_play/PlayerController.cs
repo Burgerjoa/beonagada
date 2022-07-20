@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        /*
         float hor = Input.GetAxis("Horizontal");
         transform.Translate(new Vector3(Mathf.Abs(hor) * walk_speed * Time.deltaTime, 0, 0));
 
@@ -32,5 +33,12 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("run", false);
         }
+        */
+        move();
+    }
+
+    void move()
+    {
+        transform.Translate(0.001f,0,0);
     }
 }
