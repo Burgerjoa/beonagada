@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("run", false);
         }
+        asdfgh
         */
         move();
     }
