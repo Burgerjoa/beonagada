@@ -3,35 +3,38 @@
   <component name="ChangeListManager">
     <list default="true" id="b4df7675-ec75-4055-acac-569fd24bd8ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.beonagada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.beonagada/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.XML.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/JsonDotNet201Source.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/JsonDotNet201Source.zip.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JsonDotNet/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Select.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Select.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_manage/DSLManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_manage/DSLManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/Attribute Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/Attribute Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/Demo Attribute Database.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/Demo Attribute Database.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/Demo Attribute Modifier Database.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/Demo Attribute Modifier Database.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/QA_AttributeDemo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/QA_AttributeDemo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/QA_XPDemo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/QA_XPDemo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/XP Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/XP Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Quantum Attributes Documentation.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Quantum Attributes Documentation.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_Attribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_Attribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_AttributeDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_AttributeDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_AttributeHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_AttributeHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_AttributeModifier.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_AttributeModifier.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_AttributeModifierDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_AttributeModifierDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_ExperienceHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Scripts/QA_ExperienceHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_play/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_play/PlayerController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
@@ -40,10 +43,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Quantum Tek/Quantum Attributes/Demo/QA_AttributeDemo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game_play/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -110,6 +109,10 @@
       <workItem from="1658340770082" duration="1146000" />
       <workItem from="1658482714099" duration="1289000" />
       <workItem from="1658509476054" duration="786000" />
+      <workItem from="1658771880136" duration="3358000" />
+      <workItem from="1658776180211" duration="95000" />
+      <workItem from="1658776301825" duration="85000" />
+      <workItem from="1658776544904" duration="1970000" />
     </task>
     <servers />
   </component>
