@@ -1009,7 +1009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464868776}
   - component: {fileID: 464868775}
-  - component: {fileID: 464868774}
+  - component: {fileID: 464868777}
   m_Layer: 0
   m_Name: CHARACTER1
   m_TagString: Untagged
@@ -1017,23 +1017,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &464868774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464868773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56a018afd1bd25e4bb232aba126893f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHeaith: 100
-  damage:
-    baseValue: 0
-  armor:
-    baseValue: 0
 --- !u!212 &464868775
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1101,6 +1084,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464868777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464868773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b1765b4e166c646a13f1ac880b535c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!850595691 &518245256
 LightingSettings:
   m_ObjectHideFlags: 0
