@@ -23,17 +23,17 @@ public class Select : MonoBehaviour
     OnSelect();
     for(int i = 0; i<chars.Length; i++)
     {
-        if(chars[i] = this)chars[i].OnDeSelect();
+        if(chars[i] != this)chars[i].OnDeSelect();
     }
   }
   void OnDeSelect()
   {
-    anim.SetBool("run", false);
+    anim.SetBool("Alchemist_Attack_Blue", false);
     sr.color = new Color(0.5f, 0.5f, 0.5f);
   }
   void OnSelect()
   {
-    anim.SetBool("run", true);
+    anim.SetBool("Alchemist_Attack_Blue", true);
     sr.color = new Color(1f, 1f, 1f);
   }
 }
