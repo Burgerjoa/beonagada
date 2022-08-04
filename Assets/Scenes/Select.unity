@@ -725,6 +725,7 @@ GameObject:
   - component: {fileID: 433906518}
   - component: {fileID: 433906520}
   - component: {fileID: 433906521}
+  - component: {fileID: 433906522}
   m_Layer: 0
   m_Name: Blademaster
   m_TagString: Untagged
@@ -837,6 +838,32 @@ MonoBehaviour:
   chars:
   - {fileID: 1868306336}
   - {fileID: 433906521}
+--- !u!61 &433906522
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433906517}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.5625}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 3.125, y: 3.125}
+    newSize: {x: 3.125, y: 3.125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.125, y: 3.125}
+  m_EdgeRadius: 0
 --- !u!1 &503452421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1610,7 @@ GameObject:
   - component: {fileID: 1868306334}
   - component: {fileID: 1868306333}
   - component: {fileID: 1868306336}
+  - component: {fileID: 1868306337}
   m_Layer: 0
   m_Name: Barbarian
   m_TagString: Untagged
@@ -1695,6 +1723,32 @@ MonoBehaviour:
   chars:
   - {fileID: 1868306336}
   - {fileID: 433906521}
+--- !u!61 &1868306337
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868306332}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 3.125, y: 2}
+    newSize: {x: 3.125, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.125, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &2091738754
 GameObject:
   m_ObjectHideFlags: 0
