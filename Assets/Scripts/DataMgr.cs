@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum Character
 {
-    Barbarian, Blademaster
+    Barbarian, Blademaster, Warlock
 }
 public class DataMgr : MonoBehaviour
 {
