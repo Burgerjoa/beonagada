@@ -28,12 +28,12 @@ public class Select : MonoBehaviour
   }
   void OnDeSelect()
   {
-    anim.SetBool("Alchemist_Attack_Blue", false);
+    anim.SetBool("Attack", false);
     sr.color = new Color(0.5f, 0.5f, 0.5f);
   }
   void OnSelect()
   {
-    anim.SetBool("Alchemist_Attack_Blue", true);
+    anim.SetBool("Attack", true);
     sr.color = new Color(1f, 1f, 1f);
   }
 }
