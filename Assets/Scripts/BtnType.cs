@@ -26,7 +26,7 @@ public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
           SceneLoader.LoadSceneHandle("Play", 1);
           break;
         case BTNType.Stat:
-          Debug.Log("Stat");
+          SceneLoader.LoadSceneHandle("stat", 0);
           break;
         case BTNType.Option:
           CanvasGroupOn(OptionGroup);
