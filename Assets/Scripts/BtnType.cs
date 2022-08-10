@@ -57,6 +57,9 @@ public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
           Application.Quit();
           Debug.Log("exit");
           break;
+        case BTNType.Achievement:
+          Debug.Log("Achievement");
+          break;
       }
    }
    public void CanvasGroupOn(CanvasGroup cg)

@@ -12,6 +12,7 @@ public enum BTNType
     Coupon,
     Languauge,
     Quit,
+    Achievement,
 
     Exit,
 }
