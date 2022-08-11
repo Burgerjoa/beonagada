@@ -60,6 +60,11 @@ public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
         case BTNType.Achievement:
           Debug.Log("Achievement");
           break;
+        case BTNType.Barbarian:
+          CanvasGroupOn(mainGroup);
+          CanvasGroupOff(OptionGroup);
+          break;
+
       }
    }
    public void CanvasGroupOn(CanvasGroup cg)

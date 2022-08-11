@@ -13,6 +13,8 @@ public enum BTNType
     Languauge,
     Quit,
     Achievement,
+    Status,
+    Barbarian,
 
     Exit,
 }
