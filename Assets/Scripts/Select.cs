@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Select : MonoBehaviour
 {
@@ -15,15 +17,20 @@ public class Select : MonoBehaviour
     sr = GetComponent<SpriteRenderer>();
     if(DataMgr.instance.currentCharacter == character)OnSelect();
     else OnDeSelect();
-  } 
-  
+  }
+
+
   private void OnMouseUpAsButton()
   {
-    DataMgr.instance.currentCharacter = character;
-    OnSelect();
-    for(int i = 0; i<chars.Length; i++)
+    if (SceneManager.GetActiveScene().name == "Select")
     {
-        if(chars[i] != this)chars[i].OnDeSelect();
+
+      DataMgr.instance.currentCharacter = character;
+      OnSelect();
+      for (int i = 0; i < chars.Length; i++)
+      {
+        if (chars[i] != this) chars[i].OnDeSelect();
+      }
     }
   }
   void OnDeSelect()
