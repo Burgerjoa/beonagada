@@ -27,4 +27,5 @@ public class CharacterBase : MonoBehaviour
     {
         transform.Translate(Speed/1000,0,0);
     }
+    
 }
