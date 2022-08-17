@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 28159572}
   - component: {fileID: 28159571}
   - component: {fileID: 28159570}
+  - component: {fileID: 28159573}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -190,6 +191,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &28159573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28159569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bde4f9c4160cc4dbd858f62b6f4e1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 0
+  Damage: 0
+  AttackSpeed: 0
+  Deffence: 0
+  Range: 0
+  obj: {fileID: 0}
 --- !u!1 &161024053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,9 +1195,9 @@ GameObject:
   m_Component:
   - component: {fileID: 464868776}
   - component: {fileID: 464868775}
-  - component: {fileID: 464868778}
   - component: {fileID: 464868780}
   - component: {fileID: 464868779}
+  - component: {fileID: 464868781}
   m_Layer: 0
   m_Name: char1
   m_TagString: Untagged
@@ -1253,24 +1272,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &464868778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464868773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddd8d51329ba8da4ea947a5d06d00633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 0
-  Damage: 0
-  AttackSpeed: 0
-  Speed: 0
-  Deffence: 0
-  Range: 0
 --- !u!61 &464868779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1318,6 +1319,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &464868781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464868773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd8d51329ba8da4ea947a5d06d00633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 0
+  Damage: 0
+  AttackSpeed: 0
+  Speed: 0
+  Deffence: 0
+  Range: 0
 --- !u!850595691 &518245256
 LightingSettings:
   m_ObjectHideFlags: 0

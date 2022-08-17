@@ -18,11 +18,10 @@ public class Select : MonoBehaviour
     if(DataMgr.instance.currentCharacter == character)OnSelect();
     else OnDeSelect();
   }
-
-
+  
   private void OnMouseUpAsButton()
   {
-    if (SceneManager.GetActiveScene().name == "Select")
+    if (SceneManager.GetActiveScene().name == "Select") // 셀렉트 씬에서만 작동
     {
 
       DataMgr.instance.currentCharacter = character;
