@@ -14,7 +14,9 @@ public enum BTNType
     Quit,
     Achievement,
     Status,
+    Shop,
     Barbarian,
+    ShopBack,
 
     Exit,
 }

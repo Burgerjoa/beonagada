@@ -9,7 +9,6 @@ public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
    Vector3 defaultScale;
    public CanvasGroup mainGroup;
    public CanvasGroup OptionGroup;
-
    private void Start()
    {
       defaultScale = buttonScale.localScale;
@@ -57,8 +56,16 @@ public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
           Application.Quit();
           Debug.Log("exit");
           break;
+        case BTNType.Shop:
+          CanvasGroupOn(OptionGroup);
+          CanvasGroupOff(mainGroup);
+          break;
         case BTNType.Achievement:
           Debug.Log("Achievement");
+          break;
+        case BTNType.ShopBack:
+          CanvasGroupOn(mainGroup);
+          CanvasGroupOff(OptionGroup);
           break;
         case BTNType.Barbarian:
           CanvasGroupOn(mainGroup);
