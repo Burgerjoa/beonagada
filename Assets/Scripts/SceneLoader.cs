@@ -18,7 +18,7 @@ public class SceneLoader : MonoBehaviour
     {
         loadScene = _name;
        loadType = _loadType;
-        SceneManager.LoadScene("Loding");
+        SceneManager.LoadScene("Loading");
     }
     IEnumerator LoadScene()
     {
