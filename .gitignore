@@ -9,6 +9,8 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
+Library/* */Library/* Temp/* */Temp/*
+UserSettings/
 
 ProjectSettings\RiderScriptEditorPersistedState.asset
 
