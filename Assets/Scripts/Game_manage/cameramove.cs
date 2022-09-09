@@ -21,17 +21,10 @@ public class cameramove : MonoBehaviour
 
         if (player == null)
         {
-            player = GameObject.Find("Barbarian"); // Object의 이름으로 대상을 찾음, 이름이 같을 경우 가장 처음 검색된 Object 반환
+            player = GameObject.FindWithTag("Player"); // Object의 이름으로 대상을 찾음, 이름이 같을 경우 가장 처음 검색된 Object 반환
         }
         
-        if (player == null)
-        {
-            player = GameObject.Find("Blademaster"); // Object의 이름으로 대상을 찾음, 이름이 같을 경우 가장 처음 검색된 Object 반환
-        }
-        if (player == null)
-        {
-            player = GameObject.Find("Warlock"); // Object의 이름으로 대상을 찾음, 이름이 같을 경우 가장 처음 검색된 Object 반환
-        }
+       
 
         
         Debug.Log(player);
