@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b4df7675-ec75-4055-acac-569fd24bd8ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.beonagada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.beonagada/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bringer Of Death/Animation/Bringer Of Death.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bringer Of Death/Animation/Bringer Of Death.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Barbarian.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Barbarian.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blademaster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Blademaster.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Warlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Warlock.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ReSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ReSpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Select.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Select.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_manage/cameramove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_manage/cameramove.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +23,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Char_/barb.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game_manage/cameramove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game_play/CharacterBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game_play/Enemy_Base.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game_play/Range.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,6 +102,9 @@
       <workItem from="1661029112444" duration="1620000" />
       <workItem from="1661934895341" duration="430000" />
       <workItem from="1662314862598" duration="3212000" />
+      <workItem from="1662367796939" duration="2791000" />
+      <workItem from="1662545473712" duration="1974000" />
+      <workItem from="1662704465875" duration="1937000" />
     </task>
     <servers />
   </component>

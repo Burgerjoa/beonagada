@@ -21,9 +21,15 @@ public class cameramove : MonoBehaviour
 
         if (player == null)
         {
-            player = GameObject.Find("Barbarian"); // Object의 이름으로 대상을 찾음, 이름이 같을 경우 가장 처음 검색된 Object 반환
-
+            player = GameObject.FindWithTag("Player"); // Object의 이름으로 대상을 찾음, 이름이 같을 경우 가장 처음 검색된 Object 반환
         }
+        
+       
+
+        
+        Debug.Log(player);
+        
+        
         CameraPosition.x = player.transform.position.x + offsetx;
         CameraPosition.y = -0f;
         CameraPosition.z = player.transform.position.z + offsetz;

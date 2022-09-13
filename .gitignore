@@ -9,6 +9,8 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
+Library/* */Library/* Temp/* */Temp/*
+UserSettings/
 
 ProjectSettings\RiderScriptEditorPersistedState.asset
 
@@ -66,3 +68,6 @@ crashlytics-build.
 
 ProjectSettings\RiderScriptEditorPersistedState.asset
 
+.idea/.idea.beonagada/.idea/workspace.xml
+ProjectSettings/RiderScriptEditorPersistedState.asset
+.idea/.idea.beonagada/.idea/workspace.xml
