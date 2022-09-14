@@ -7,6 +7,7 @@ public class UI : MonoBehaviour
 {
     [SerializeField]
     private Slider hpbar;
+    public Transform enemy;
 
     private float maxHp = 100;
     private float curHp = 100;
@@ -31,6 +32,7 @@ public class UI : MonoBehaviour
             imsi = (float)curHp / (float)maxHp;
         }
         HandleHp();
+        transform.position = enemy.position;
     }
 
     private void HandleHp()
