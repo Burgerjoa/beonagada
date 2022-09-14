@@ -7,11 +7,10 @@ public class UI : MonoBehaviour
 {
     [SerializeField]
     private Slider hpbar;
-    public Transform enemy;
-
     private float maxHp = 100;
-    private float curHp = 100;
+    public static float curHp = 100;
     float imsi;
+    
     void start()
     {
         hpbar.value = (float) curHp / (float) maxHp;
@@ -31,13 +30,26 @@ public class UI : MonoBehaviour
             }
             imsi = (float)curHp / (float)maxHp;
         }
+        
         HandleHp();
-        transform.position = enemy.position;
+        void OnTriggerEnter2D(Collider2D col) //피격 판정
+        {
+            if (col.CompareTag("Player"))
+            {
+                if (true)
+                {
+                    curHp -= 10f;
+                }
+
+            }
+        }
     }
 
     private void HandleHp()
     {
         hpbar.value = Mathf.Lerp(hpbar.value, (float) curHp / (float) maxHp, Time.deltaTime * 10) ;
     }
+    
+
   
 }

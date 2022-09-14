@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class CharacterBase : MonoBehaviour
 {
     float HP;
-    float Damage;
+    public float Damage;
     float AttackSpeed;
     float Speed;
     float Deffence;
