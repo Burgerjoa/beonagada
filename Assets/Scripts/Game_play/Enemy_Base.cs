@@ -21,6 +21,7 @@ public class Enemy_Base : MonoBehaviour
         {
             move();
         }
+        if (gameObject.)
     }
 
 
