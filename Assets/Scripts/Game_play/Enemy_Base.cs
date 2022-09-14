@@ -28,4 +28,18 @@ public class Enemy_Base : MonoBehaviour
     {
         transform.Translate(-0.002f*Speed,0,0);
     }
+
+    public static void Damaged()
+    {
+        if(UI.curHp > 0)
+        {
+            UI.curHp -= 10;
+        }
+        else
+        {
+            UI.curHp = 0;
+        }
+        imsi = (float)curHp / (float)maxHp;
+    }
+    
 }
