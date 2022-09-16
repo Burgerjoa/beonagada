@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-
 
 public class Enemy_Base : MonoBehaviour
 {
     public float Speed;
 
+    public static bool Delay = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +21,10 @@ public class Enemy_Base : MonoBehaviour
         {
             move();
         }
-        if (gameObject.)
-    }
 
+        Damaged();
+        StartCoroutine("Attack_Delay");
+    }[NotNull]
 
     public void move()
     {
@@ -32,15 +33,18 @@ public class Enemy_Base : MonoBehaviour
 
     public static void Damaged()
     {
-        if(UI.curHp > 0)
+        void OnTriggerEnter2D(Collider2D col) //피격 판정
         {
-            UI.curHp -= 10;
+            if (col.CompareTag("Player") && Delay == true)
+            {
+                Delay = false;
+                UI.damaged_by_player = true;
+            }
         }
-        else
-        {
-            UI.curHp = 0;
-        }
-        imsi = (float)curHp / (float)maxHp;
     }
-    
+    public static IEnumerator Attack_Delay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Delay = true;
+    }
 }
