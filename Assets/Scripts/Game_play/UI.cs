@@ -7,9 +7,11 @@ public class UI : MonoBehaviour
 {
     [SerializeField]
     private Slider hpbar;
-    private float maxHp = 100;
+    public static float maxHp = 100;
     public static float curHp = 100;
-    float imsi;
+    public static float imsi;
+    public static bool damaged_by_player;
+
     
     void start()
     {
@@ -30,19 +32,21 @@ public class UI : MonoBehaviour
             }
             imsi = (float)curHp / (float)maxHp;
         }
+        if (damaged_by_player == true)
+        {
+            if(curHp > 0)
+            {
+                curHp -= 10;
+            }
+            else
+            {
+                curHp = 0;
+            }
+            imsi = (float)curHp / (float)maxHp;
+        }
         
         HandleHp();
-        void OnTriggerEnter2D(Collider2D col) //피격 판정
-        {
-            if (col.CompareTag("Player"))
-            {
-                if (true)
-                {
-                    curHp -= 10f;
-                }
-
-            }
-        }
+        
     }
 
     private void HandleHp()

@@ -34,12 +34,18 @@ public class Select : MonoBehaviour
   }
   void OnDeSelect()
   {
-    anim.SetBool("Attack", false);
-    sr.color = new Color(0.5f, 0.5f, 0.5f);
+    if (SceneManager.GetActiveScene().name == "Select") // 셀렉트 씬에서만 작동
+    {
+      anim.SetBool("Attack", false);
+      sr.color = new Color(0.5f, 0.5f, 0.5f);
+    }
   }
   void OnSelect()
   {
-    anim.SetBool("Attack", true);
-    sr.color = new Color(1f, 1f, 1f);
+    if (SceneManager.GetActiveScene().name == "Select") // 셀렉트 씬에서만 작동
+    {
+      anim.SetBool("Attack", true);
+      sr.color = new Color(1f, 1f, 1f);
+    }
   }
 }
