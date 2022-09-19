@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 16090071}
   - component: {fileID: 16090070}
   - component: {fileID: 16090073}
+  - component: {fileID: 16090074}
   m_Layer: 5
   m_Name: StartBtn
   m_TagString: Untagged
@@ -219,6 +220,18 @@ MonoBehaviour:
           m_StringArgument: Play
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 16090074}
+        m_TargetAssemblyTypeName: Main, Assembly-CSharp
+        m_MethodName: PlayBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &16090071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +280,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70f81df35e616f84c91f6df4bcb9c81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &16090074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16090068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a0fd95abffd0e4aa8c6c1ae438d960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &32327716
