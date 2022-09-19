@@ -1028,22 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb518c403b2ed74286f22eed8fc34f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  hp: 2
-  isHurt: 0
-  sr: {fileID: 0}
-  halfA:
-    r: 1
-    g: 1
-    b: 1
-    a: 0.5
-  fullA:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  speed: 1
-  isknockback: 0
+  hp: 4
+  speed: 2
   impact: {fileID: 0}
-  audio: {fileID: 0}
-  walk_speed: 1
+  walk_speed: 2

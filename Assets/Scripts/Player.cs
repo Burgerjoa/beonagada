@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
 
     IEnumerator HurtRoutine()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
         isHurt = false;
     }
 
@@ -113,4 +113,3 @@ public class Player : MonoBehaviour
         }
     }
 }
-*/
