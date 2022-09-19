@@ -13,11 +13,15 @@ public class CharacterBase : MonoBehaviour
     float Deffence;
     float Range;
     private Rigidbody2D _playerRigidbody; // 사용할 리지드바디 컴포넌트
+    Animator anim;
+
 
     
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
+
         _playerRigidbody = GetComponent<Rigidbody2D>();
 
         HP = barb.HP;
@@ -35,9 +39,16 @@ public class CharacterBase : MonoBehaviour
         {
             move();
         }
+        
+        anim.SetBool("Attack", true);
+
     }
 
 
+    IEnumerator Attack_Speed()
+    {
+        
+    }
     public void move()
     {
         transform.Translate(0.002f*Speed,0,0);

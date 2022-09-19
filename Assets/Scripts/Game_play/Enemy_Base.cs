@@ -53,4 +53,3 @@ public class Enemy_Base : MonoBehaviour
     
 }
 */
->>>>>>> 68c9ba19e0caed10b0d173f8b1f0d019832ca124
