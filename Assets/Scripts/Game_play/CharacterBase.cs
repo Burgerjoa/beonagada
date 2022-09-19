@@ -45,10 +45,10 @@ public class CharacterBase : MonoBehaviour
     }
 
 
-    IEnumerator Attack_Speed()
-    {
+    //IEnumerator Attack_Speed()
+    //{
         
-    }
+    //}
     public void move()
     {
         transform.Translate(0.002f*Speed,0,0);
