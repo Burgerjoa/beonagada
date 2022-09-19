@@ -9,7 +9,7 @@ public class SceneLoad : MonoBehaviour
    public Slider progressbar;
    public Text loadtext;
    
-   private void start()
+   private void Start()
    {
       StartCoroutine(LoadScene());
    } 
@@ -30,11 +30,7 @@ public class SceneLoad : MonoBehaviour
         {
             progressbar.value = Mathf.MoveTowards(progressbar.value, 1f, Time.deltaTime);
         }
-        if(progressbar.value >= 1f)
-        {
-            loadtext.text = "press SpaceBar";
-        }
-        if(Input.GetKeyDown(KeyCode.Space) && progressbar.value >= 1f && operation.progress >= 0.9f)
+        if(progressbar.value >= 1f && operation.progress >= 0.9f)
         {
             operation.allowSceneActivation = true;
         }
