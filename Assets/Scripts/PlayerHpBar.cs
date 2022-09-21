@@ -29,7 +29,7 @@ public class PlayerHpBar : MonoBehaviour
     public GameObject HpLineFolder;
 
     public Text playerHpText;
-    float unitHp = 200f;
+   
 
     // Start is called before the first frame update
     void Start ()
@@ -49,14 +49,14 @@ public class PlayerHpBar : MonoBehaviour
     {
         maxHp += 150;
         currentHp += 150;
-        float scaleX = ( 1000f / unitHp ) / ( maxHp / unitHp );
-        HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( false );
-
+        float scaleX = ( 1000f / currentHp ) / ( maxHp / currentHp );
+        /*HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( false );
+*/
         foreach ( Transform child in HpLineFolder.transform)
         {
             child.gameObject.transform.localScale = new Vector3 ( scaleX, 1, 1 );
         }
 
-        HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( true );
+/*        HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( true );*/
     }
 }
