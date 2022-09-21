@@ -24,10 +24,6 @@ public class cameramove : MonoBehaviour
             player = GameObject.FindWithTag("Player"); // Object의 이름으로 대상을 찾음, 이름이 같을 경우 가장 처음 검색된 Object 반환
         }
         
-       
-
-        
-        Debug.Log(player);
         
         
         CameraPosition.x = player.transform.position.x + offsetx;

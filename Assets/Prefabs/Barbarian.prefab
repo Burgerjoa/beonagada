@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
+  Back: 0
 --- !u!50 &-7281596786518795495
 Rigidbody2D:
   serializedVersion: 4
@@ -186,7 +187,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1001 &3769714480639308531
 PrefabInstance:
   m_ObjectHideFlags: 0
