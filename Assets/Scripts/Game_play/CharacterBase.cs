@@ -53,6 +53,11 @@ public class CharacterBase : MonoBehaviour
             if (Back == false)
             {
                 Move();
+                if (backGauge <= 10f)
+                {
+                    backGauge += Time.deltaTime;
+
+                }
             }
             else
             {
@@ -80,10 +85,12 @@ public class CharacterBase : MonoBehaviour
 
     public void Back_Move()
     {
-        transform.Translate(-0.002f*Speed,0,0);
-        transform.localScale = new Vector3(-1, 1, 1); // 왼쪽 바라보기
-        backGauge -= Time.deltaTime;
-        Debug.Log(backGauge);
-
+        if (backGauge>=0)
+        {
+            transform.Translate(-0.002f * Speed, 0, 0);
+            transform.localScale = new Vector3(-1, 1, 1); // 왼쪽 바라보기
+            backGauge -= Time.deltaTime;
+            Debug.Log(backGauge);
+        }
     }
 }
