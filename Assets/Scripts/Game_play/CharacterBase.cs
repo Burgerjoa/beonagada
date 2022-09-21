@@ -33,7 +33,7 @@ public class CharacterBase : MonoBehaviour
         Speed  = barb.Speed;
         Deffence = barb.Def;
         Range = barb.Range;
-        backGauge = 10f;
+        backGauge = 5f;
 
     }
 
@@ -53,7 +53,7 @@ public class CharacterBase : MonoBehaviour
             if (Back == false)
             {
                 Move();
-                if (backGauge <= 10f)
+                if (backGauge <= 5f)
                 {
                     backGauge += Time.deltaTime;
 
