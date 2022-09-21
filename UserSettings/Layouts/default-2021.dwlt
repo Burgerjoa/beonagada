@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 60
+  controlID: 70
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 65
+  controlID: 71
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 66
+  controlID: 49
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Pixel Heroes Pack/ColorSwap
+    - Assets/Brackeys/2D Mega Pack/Backgrounds
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 65
   m_LastFolders:
-  - Assets/Pixel Heroes Pack/ColorSwap
+  - Assets/Brackeys/2D Mega Pack/Backgrounds
   m_LastFoldersGridSize: 65
   m_LastProjectPath: C:\A\git\beonagada
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 107}
-    m_SelectedIDs: 40630000
-    m_LastClickedID: 25408
-    m_ExpandedIDs: 00000000e0620000e2620000e4620000e6620000e8620000ea620000ec620000ee620000f0620000f2620000f4620000f6620000f862000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: fe680000
+    m_LastClickedID: 26878
+    m_ExpandedIDs: 00000000e0620000e2620000e4620000e6620000e8620000ea620000ec620000ee620000f0620000f2620000f4620000f6620000f8620000266300004cba000050ba000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -388,7 +388,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000fe880000ce6100007e780000967c0000e27b000006620000ee610000869c0000089c0000e06100002c6200005e730000d05f0000e25f0000000000000aa30000466200005c62000010600000
+    m_ExpandedInstanceIDs: c6230000fe880000ce6100007e780000967c0000e27b000006620000ee610000869c0000089c0000e06100002c6200005e730000d05f0000e25f00000aa30000466200005c62000010600000000000006663000064630000f86f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -490,7 +490,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2afbffff205f0000625f0000
+      m_ExpandedIDs: f0cafffff4e4ffff5ee5ffff7ce8ffff00e9ffff5ceafffffaebffff78f5ffff4cf7ffffbef7ffff66f8ffff2afbfffffa9f000048a10000feae000012af000036af000004ba000018ba00003cba0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -761,9 +761,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.380111, y: -1.2056164, z: -0.33034006}
+    m_Target: {x: 347.5076, y: 197.12202, z: -0.8532775}
     speed: 2
-    m_Value: {x: 6.380111, y: -1.2056164, z: -0.33034006}
+    m_Value: {x: 347.5076, y: 197.12202, z: -0.8532775}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -814,9 +814,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.486639
+    m_Target: 149.17953
     speed: 2
-    m_Value: 8.486639
+    m_Value: 149.17953
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -913,7 +913,7 @@ MonoBehaviour:
       y: 21
       width: 934.80005
       height: 386.8
-    m_Scale: {x: 1.1940521, y: 1.1940521}
+    m_Scale: {x: 1.092727, y: 1.092727}
     m_Translation: {x: 467.40002, y: 193.4}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -921,10 +921,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -391.44022
-      y: -161.96948
-      width: 782.88043
-      height: 323.93896
+      x: -427.73724
+      y: -176.9884
+      width: 855.4745
+      height: 353.9768
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1168.5, y: 509.75}
