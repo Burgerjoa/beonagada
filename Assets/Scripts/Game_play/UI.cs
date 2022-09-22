@@ -9,7 +9,7 @@ public class UI : MonoBehaviour
     private Slider hpbar;
     public static float maxHp = 100;
     public static float curHp = 100;
-    public static float imsi;
+    public static float ims;
     public static bool damaged_by_player;
 
     
@@ -30,7 +30,7 @@ public class UI : MonoBehaviour
             {
                 curHp = 0;
             }
-            imsi = (float)curHp / (float)maxHp;
+            ims = (float)curHp / (float)maxHp;
         }
         if (damaged_by_player == true)
         {
@@ -42,7 +42,7 @@ public class UI : MonoBehaviour
             {
                 curHp = 0;
             }
-            imsi = (float)curHp / (float)maxHp;
+            ims = (float)curHp / (float)maxHp;
         }
         
         HandleHp();
