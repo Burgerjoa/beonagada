@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,6 +31,7 @@ public class BackGauge : MonoBehaviour
             }
             ims = (float)curBackgauge / (float)maxBackgauge;
         }
+        HandleBackgauge();
     }
 
     private void HandleBackgauge()
@@ -38,3 +39,4 @@ public class BackGauge : MonoBehaviour
         Backgaugebar.value = Mathf.Lerp(Backgaugebar.value, (float) curBackgauge / (float) maxBackgauge, Time.deltaTime * 10) ;
     } 
 }
+*/
