@@ -13,9 +13,18 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
+        // 서브메뉴
         if(Input.GetButtonDown("Cancel"))
         {
-           menuSet.SetActive(true);
+            if(menuSet.activeSelf)
+                menuSet.SetActive(false);
+            else
+                menuSet.SetActive(true);
         }
+    }
+
+    public void GameExit()
+    {
+        Application.Quit();
     } 
 }
