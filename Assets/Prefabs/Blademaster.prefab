@@ -166,6 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 0
   Back: 0
+  backGauge: 0
+  curbackGauge: 10
 --- !u!50 &-2050920749209726651
 Rigidbody2D:
   serializedVersion: 4

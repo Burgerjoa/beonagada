@@ -16,14 +16,25 @@ public class CharacterBase : MonoBehaviour
     private Rigidbody2D _playerRigidbody; // 사용할 리지드바디 컴포넌트
     Animator anim;
     public bool Back = false;
-    public float backGauge;
+    public float backGauge; //전체 백게이지
+    public float curbackGauge=10f; //현재 백게이지
 
+    public float CurBackGauge{
+        get{
+            return curbackGauge;
+        }set{
+            curbackGauge=value;
+            back.HandleBackgauge(curbackGauge);
+        }
+    }
 
+    BackGauge back;
     
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        back=GameObject.Find("Canvas").GetComponent<BackGauge>();
 
         _playerRigidbody = GetComponent<Rigidbody2D>();
 
@@ -33,7 +44,7 @@ public class CharacterBase : MonoBehaviour
         Speed  = barb.Speed;
         Deffence = barb.Def;
         Range = barb.Range;
-        backGauge = 5f;
+        backGauge = back.maxBackgauge;
 
     }
 
@@ -53,9 +64,10 @@ public class CharacterBase : MonoBehaviour
             if (Back == false)
             {
                 Move();
-                if (backGauge <= 5f)
+                //Debug.Log($"CurBackGauge = {CurBackGauge}, backGauge = {backGauge}");
+                if (CurBackGauge <= backGauge)
                 {
-                    backGauge += Time.deltaTime;
+                    CurBackGauge += Time.deltaTime;
 
                 }
             }
@@ -85,12 +97,11 @@ public class CharacterBase : MonoBehaviour
 
     public void Back_Move()
     {
-        if (backGauge>=0)
+        if (CurBackGauge>=0)
         {
             transform.Translate(-0.002f * Speed, 0, 0);
             transform.localScale = new Vector3(-1, 1, 1); // 왼쪽 바라보기
-            backGauge -= Time.deltaTime;
-            Debug.Log(backGauge);
+            CurBackGauge -= 2*Time.deltaTime;
         }
     }
 }

@@ -24,7 +24,7 @@ public class UI : MonoBehaviour
         {
             if(curHp > 0)
             {
-                curHp -= 10;
+                curHp -= 10f;
             }
             else
             {
@@ -36,7 +36,7 @@ public class UI : MonoBehaviour
         {
             if(curHp > 0)
             {
-                curHp -= 10;
+                curHp -= 10f;
             }
             else
             {
