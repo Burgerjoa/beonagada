@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -54,4 +54,4 @@ public class Test : MonoBehaviour
         string title = "전설의";
         Debug.Log(title + "" + playerName);
     }
-}
+}*/
