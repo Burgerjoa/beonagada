@@ -20,12 +20,12 @@ public class Enemy_Base : MonoBehaviour
 
     private bool iskcockback= false;
 
-
+    private Rigidbody2D rigid;
 
 
     void Start()
     {
-      
+      rigid=GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -34,13 +34,16 @@ public class Enemy_Base : MonoBehaviour
      
     }
     [FormerlySerializedAs("sword_man")] public Player player;
-    private void OnTriggerEnter2D(Collider2D col) //피격 판정
+    private void OnCollisionEnter2D(Collision2D col) //피격 판정
     {
-        if (col.CompareTag("Player"))
+        if (col.transform.tag=="PlayerAttackRange")
         {
             Hurt(col.transform.position);
-        
-
+        }
+        if (col.transform.tag == "Player")
+        {
+            GameObject canvas = GameObject.Find("Canvas");
+            canvas.GetComponent<UI>().HitPlayer();
         }
     }
 
@@ -69,28 +72,39 @@ public class Enemy_Base : MonoBehaviour
 
     IEnumerator Knockback(float dir)
     {
+        ishurt=false;
         iskcockback = true;
         float ctime = 0;
-        while (ctime < 0.2f)
-        {
-            if (transform.rotation.y==0)
-            {
-                transform.Translate(5f,0,0);
-                    
-                //transform.Translate(Vector2.down*speed*Time.deltaTime*dir*3);
-            }
-            else
-            {
-                transform.Translate(5f,0,0);
-                //transform.Translate(Vector2.down*speed*Time.deltaTime*dir*3);
-            }
+        Debug.Log("AddForce");
+        rigid.AddForce(Vector2.right*5f, ForceMode2D.Impulse);
 
-            ctime += Time.deltaTime;
-            yield return null;
+        // TODO 넉백 로직 수정
+
+        yield return new WaitForSeconds(1f);
+
+        rigid.velocity = Vector2.zero;
+        // while (ctime < 0.2f)
+        // {
+        //     if (transform.rotation.y==0)
+        //     {
+        //         transform.Translate(0.2f,0,0);
+                    
+        //         //transform.Translate(Vector2.down*speed*Time.deltaTime*dir*3);
+        //     }
+        //     else
+        //     {
+        //         transform.Translate(0.2f,0,0);
+        //         //transform.Translate(Vector2.down*speed*Time.deltaTime*dir*3);
+        //     }
+
+        //     ctime += Time.deltaTime;
+        //     yield return null;
             
-        }
+        // }
 
         iskcockback = false;
+
+        yield return null;
     }
 /*
     IEnumerator alphablink()

@@ -204,11 +204,11 @@ GameObject:
   - component: {fileID: 645704806910861515}
   m_Layer: 0
   m_Name: Attack_range
-  m_TagString: Player
+  m_TagString: PlayerAttackRange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6972920508731390093
 Transform:
   m_ObjectHideFlags: 0
