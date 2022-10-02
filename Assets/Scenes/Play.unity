@@ -5205,6 +5205,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 418524069602648052, guid: e1a2b106d991b8c49a3d94e5cad14489, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 418524069602648055, guid: e1a2b106d991b8c49a3d94e5cad14489, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -5215,7 +5219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 418524069602648055, guid: e1a2b106d991b8c49a3d94e5cad14489, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.12
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 418524069602648055, guid: e1a2b106d991b8c49a3d94e5cad14489, type: 3}
       propertyPath: m_LocalPosition.z

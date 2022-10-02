@@ -1,55 +1,109 @@
-/*using System.Collections;
+using System;
+using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
+using UnityEngine.Serialization;
+using UnityEngine.UI; // Image 자료형을 위해 using 해줘야 함
 public class Enemy_Base : MonoBehaviour
 {
-    public float Speed;
 
-    public static bool Delay = false;
-    // Start is called before the first frame update
+    public int maxHp;
+    public int nowHp;
+    public int atkDmg;
+    public int atkSpeed;
+    public Player slime;
+    Image nowHpbar;
+    private RectTransform hpBar;
+    private bool ishurt = false;
+
+    public float speed;
+
+    private bool iskcockback= false;
+
+
+
+
     void Start()
     {
-        Speed = 5f;
+      
     }
-    private void Update()
+
+    // Update is called once per frame
+    void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
+     
+    }
+    [FormerlySerializedAs("sword_man")] public Player player;
+    private void OnTriggerEnter2D(Collider2D col) //피격 판정
+    {
+        if (col.CompareTag("Player"))
         {
-            move();
+            Hurt(col.transform.position);
+        
+
         }
-
-        Damaged();
-        StartCoroutine("Attack_Delay");
-    }[NotNull]
-
-    public void move()
-    {
-        transform.Translate(-0.002f*Speed,0,0);
     }
 
-    public static void Damaged()
+    public void Hurt(Vector2 pos)
     {
-        void OnTriggerEnter2D(Collider2D col) //피격 판정
+        if (!ishurt)
         {
-            if (col.CompareTag("Player") && Delay == true)
+            ishurt = true;
+            if (nowHp <= 0)// 적 사망
             {
-                Delay = false;
-                UI.damaged_by_player = true;
             }
+            else
+            {
+                float x = transform.position.x - pos.x;
+                if (x < 0)
+                    x = 1;
+                else
+                    x = -1;
+                StartCoroutine(Knockback(x));
+                //StartCoroutine(alphablink());
+            }
+            
+        }
+        
+    }
+
+    IEnumerator Knockback(float dir)
+    {
+        iskcockback = true;
+        float ctime = 0;
+        while (ctime < 0.2f)
+        {
+            if (transform.rotation.y==0)
+            {
+                transform.Translate(5f,0,0);
+                    
+                //transform.Translate(Vector2.down*speed*Time.deltaTime*dir*3);
+            }
+            else
+            {
+                transform.Translate(5f,0,0);
+                //transform.Translate(Vector2.down*speed*Time.deltaTime*dir*3);
+            }
+
+            ctime += Time.deltaTime;
+            yield return null;
+            
+        }
+
+        iskcockback = false;
+    }
+/*
+    IEnumerator alphablink()
+    {
+        while (ishurt)
+        {
+            yield return new WaitForSeconds(0.1f);
+            sr.color = halfA;
+            yield return new WaitForSeconds(0.1f);
+            sr.color = fullA;
+
         }
     }
-<<<<<<< HEAD
-    public static IEnumerator Attack_Delay()
-    {
-        yield return new WaitForSeconds(0.5f);
-        Delay = true;
-    }
-}
-=======
-    
-}
 */
+
+}

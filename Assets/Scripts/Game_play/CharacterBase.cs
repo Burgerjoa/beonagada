@@ -45,6 +45,13 @@ public class CharacterBase : MonoBehaviour
         Deffence = barb.Def;
         Range = barb.Range;
         backGauge = back.maxBackgauge;
+        
+        if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
+        {
+            anim.SetBool("Run", true);
+        }
+
+        
 
     }
 
@@ -77,7 +84,8 @@ public class CharacterBase : MonoBehaviour
             }
         }
         
-        anim.SetBool("Attack", true);
+
+        
 
     }
 
@@ -90,9 +98,6 @@ public class CharacterBase : MonoBehaviour
     {
         transform.Translate(0.002f*Speed,0,0);
         transform.localScale = new Vector3(1, 1, 1); // 왼쪽 바라보기
-
-
-
     }
 
     public void Back_Move()
