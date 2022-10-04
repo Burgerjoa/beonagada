@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class barb : MonoBehaviour
 {
-    public static float HP;
+    public static float Hp;
     public static float Damage;
     public static float AttackSpeed;
     public static float Speed;
@@ -21,7 +21,7 @@ public class barb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HP = 1000f;
+        Hp = 1000f;
         Damage = 10f;
         AttackSpeed = 10f;
         Speed = 10f;
