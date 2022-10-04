@@ -31,7 +31,8 @@ public class Enemy_Base : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        transform.Translate(-0.002f,0,0);
+
     }
     [FormerlySerializedAs("sword_man")] public Player player;
     private void OnCollisionEnter2D(Collision2D col) //피격 판정

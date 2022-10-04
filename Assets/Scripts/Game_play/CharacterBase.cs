@@ -13,6 +13,9 @@ public class CharacterBase : MonoBehaviour
     float Speed;
     float Deffence;
     float Range;
+    private float Now_exp;
+    private float Max_exp;
+    private int Now_level=1;
     private Rigidbody2D _playerRigidbody; // 사용할 리지드바디 컴포넌트
     Animator anim;
     public bool Back = false;
@@ -38,13 +41,17 @@ public class CharacterBase : MonoBehaviour
 
         _playerRigidbody = GetComponent<Rigidbody2D>();
 
-        HP = barb.HP;
+        HP = barb.Hp;
         Damage = barb.Damage;
         AttackSpeed = barb.AttackSpeed;
         Speed  = barb.Speed;
         Deffence = barb.Def;
         Range = barb.Range;
         backGauge = back.maxBackgauge;
+        if (Now_level >= 2)
+        {
+            Max_exp *=  1.2f;
+        }
         
         if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
         {
