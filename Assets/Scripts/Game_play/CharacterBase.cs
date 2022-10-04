@@ -7,20 +7,22 @@ using UnityEngine.UI;
 
 public class CharacterBase : MonoBehaviour
 {
-    float HP;
+    public float HP;
     public float Damage;
     float AttackSpeed;
-    float Speed;
+    public float Speed;
     float Deffence;
     float Range;
-    private float Now_exp;
-    private float Max_exp;
-    private int Now_level=1;
     private Rigidbody2D _playerRigidbody; // 사용할 리지드바디 컴포넌트
     Animator anim;
     public bool Back = false;
     public float backGauge; //전체 백게이지
     public float curbackGauge=10f; //현재 백게이지
+    bool isHurt;
+    private bool isknockback= false;
+    SpriteRenderer sr;
+    Color halfA = new Color(1, 1, 1, 0.5f);
+    Color fullA = new Color(1, 1, 1, 1);
 
     public float CurBackGauge{
         get{
@@ -37,21 +39,18 @@ public class CharacterBase : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         back=GameObject.Find("Canvas").GetComponent<BackGauge>();
 
         _playerRigidbody = GetComponent<Rigidbody2D>();
 
-        HP = barb.Hp;
+        //HP = barb.HP;
         Damage = barb.Damage;
         AttackSpeed = barb.AttackSpeed;
         Speed  = barb.Speed;
         Deffence = barb.Def;
         Range = barb.Range;
         backGauge = back.maxBackgauge;
-        if (Now_level >= 2)
-        {
-            Max_exp *=  1.2f;
-        }
         
         if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
         {
@@ -95,6 +94,7 @@ public class CharacterBase : MonoBehaviour
         
 
     }
+    
 
 
     //IEnumerator Attack_Speed()
@@ -116,4 +116,68 @@ public class CharacterBase : MonoBehaviour
             CurBackGauge -= 2*Time.deltaTime;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("EnemyAtk"))
+        {
+            Hurt(collision.GetComponentInParent<Enemy>().damage,collision.transform.position);
+        }
+    }
+
+    public void Hurt(int damage, Vector2 pos)
+    {
+        if(!isHurt)
+        {   
+            isHurt = true;
+            HP = HP - damage;
+            if(HP<=0)
+            {               
+            }
+            else
+            {               
+                float x = transform.position.x - pos.x;
+                if(x<0)
+                   x = 1;
+                else
+                   x = -1;
+                StartCoroutine(Knockback(x));
+                StartCoroutine(HurtRoutine());
+                StartCoroutine(alphablink());
+            }
+        }
+    }
+
+    IEnumerator Knockback(float dir)
+    {   
+        isknockback = true;
+        float ctime = 0;
+        while(ctime < 0.2f)
+        {
+            if(transform.rotation.y == 0)
+               transform.Translate(Vector2.left*Speed*Time.deltaTime*dir);
+            else
+               transform.Translate(Vector2.left*Speed*Time.deltaTime*-1f*dir);
+            ctime += Time.deltaTime;
+            yield return null;
+        }
+        isknockback = false;
+    }
+
+    IEnumerator alphablink()
+    {
+        while(isHurt)
+        {   
+            yield return new WaitForSeconds(0.1f);
+            sr.color = halfA;
+            yield return new WaitForSeconds(0.1f);
+            sr.color = fullA;
+        }
+    }
+
+    IEnumerator HurtRoutine()
+    {   
+        yield return new WaitForSeconds(0.5f);
+        isHurt = false;
+    }
+
 }
