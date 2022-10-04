@@ -64,7 +64,7 @@ public class UI : MonoBehaviour
     IEnumerator PlayerHited()
     {
         damaged_by_player = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         damaged_by_player = true;
     }
   
