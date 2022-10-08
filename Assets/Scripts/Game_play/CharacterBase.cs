@@ -21,6 +21,11 @@ public class CharacterBase : MonoBehaviour
     bool isHurt;
     private bool isknockback= false;
     SpriteRenderer sr;
+    private float _currentExp;
+    private float _level;
+    private float _maxExp;
+    
+    
     Color halfA = new Color(1, 1, 1, 0.5f);
     Color fullA = new Color(1, 1, 1, 1);
 
@@ -52,12 +57,15 @@ public class CharacterBase : MonoBehaviour
         Range = barb.Range;
         backGauge = back.maxBackgauge;
         
+        _maxExp = Mathf.Pow(1.2f,_level-1);
+        
+        
         if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
         {
             anim.SetBool("Run", true);
         }
 
-        
+
 
     }
 
@@ -90,7 +98,7 @@ public class CharacterBase : MonoBehaviour
             }
         }
         
-
+        Debug.Log(_maxExp);
         
 
     }
