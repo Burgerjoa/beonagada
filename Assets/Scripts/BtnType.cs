@@ -67,6 +67,10 @@ public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
           CanvasGroupOn(mainGroup);
           CanvasGroupOff(OptionGroup);
           break;
+        case BTNType.Mail:
+          CanvasGroupOn(OptionGroup);
+          CanvasGroupOff(mainGroup);
+          break;
         case BTNType.Barbarian:
           CanvasGroupOn(mainGroup);
           CanvasGroupOff(OptionGroup);

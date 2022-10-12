@@ -17,7 +17,7 @@ public enum BTNType
     Shop,
     Barbarian,
     ShopBack,
-
+    Mail,
     Exit,
 }
 public class MainUI : MonoBehaviour
