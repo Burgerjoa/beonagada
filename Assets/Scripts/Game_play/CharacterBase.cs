@@ -21,6 +21,11 @@ public class CharacterBase : MonoBehaviour
     bool isHurt;
     private bool isknockback= false;
     SpriteRenderer sr;
+    private float _currentExp;
+    public static int _level;
+    private float _maxExp;
+    
+    
     Color halfA = new Color(1, 1, 1, 0.5f);
     Color fullA = new Color(1, 1, 1, 1);
 
@@ -51,14 +56,13 @@ public class CharacterBase : MonoBehaviour
         Deffence = barb.Def;
         Range = barb.Range;
         backGauge = back.maxBackgauge;
+        _currentExp = 0;
+        
         
         if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
         {
             anim.SetBool("Run", true);
         }
-
-        
-
     }
 
     private void Update()
@@ -89,8 +93,20 @@ public class CharacterBase : MonoBehaviour
                 Back_Move();
             }
         }
-        
 
+        if (Input.GetMouseButtonDown(1))
+        {
+            _currentExp += 5;
+        }
+
+        if (_currentExp >= _maxExp)
+        {
+            _level++;
+            _maxExp = Mathf.Pow(1.2f,_level);
+            _currentExp = 0;
+
+        }
+        Debug.Log(_currentExp);
         
 
     }
@@ -166,7 +182,7 @@ public class CharacterBase : MonoBehaviour
     IEnumerator alphablink()
     {
         while(isHurt)
-        {   
+        {
             yield return new WaitForSeconds(0.1f);
             sr.color = halfA;
             yield return new WaitForSeconds(0.1f);
