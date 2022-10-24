@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
     [SerializeField]
     private Slider hpbar;
-    public static float maxHp = 100;
-    public static float curHp = 100;
+    public Text gameoverText;
+    public static float maxHp = 50;
+    public static float curHp = 50;
     public static float imsi;
     public static bool damaged_by_player = true;
+    public GameObject GameOverScreen;
 
-    
     void start()
     {
         hpbar.value = (float) curHp / (float) maxHp;
@@ -33,9 +35,15 @@ public class UI : MonoBehaviour
             imsi = (float)curHp / (float)maxHp;
             HandleHp();
         }
+        
+        if(curHp <=0 )
+        {
+           
+            GameOverScreen.SetActive(true);
 
+        }
+        
     }
-
     public void HitPlayer()
     {
         if (damaged_by_player == true)
@@ -64,7 +72,7 @@ public class UI : MonoBehaviour
     IEnumerator PlayerHited()
     {
         damaged_by_player = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         damaged_by_player = true;
     }
   

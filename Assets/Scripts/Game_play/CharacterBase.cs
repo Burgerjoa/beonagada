@@ -24,6 +24,7 @@ public class CharacterBase : MonoBehaviour
     private float _currentExp;
     public static int _level;
     private float _maxExp;
+    bool Death = false;
     
     
     Color halfA = new Color(1, 1, 1, 0.5f);
@@ -107,8 +108,6 @@ public class CharacterBase : MonoBehaviour
 
         }
         Debug.Log(_currentExp);
-        
-
     }
     
 
@@ -161,6 +160,13 @@ public class CharacterBase : MonoBehaviour
                 StartCoroutine(alphablink());
             }
         }
+    }
+    public void isDeath()
+    {
+        anim.SetBool("Death", true);
+        Death = true;
+        Speed = 0;
+
     }
 
     IEnumerator Knockback(float dir)

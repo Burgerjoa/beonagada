@@ -32,6 +32,10 @@ public class Enemy_Base : MonoBehaviour
     void Update()
     {
         transform.Translate(-0.002f,0,0);
+        if(nowHp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
 
     }
     [FormerlySerializedAs("sword_man")] public Player player;
@@ -69,6 +73,10 @@ public class Enemy_Base : MonoBehaviour
             
         }
         
+    }
+    public void TakeDamage(int damage)
+    {
+        nowHp = nowHp - damage;
     }
 
     IEnumerator Knockback(float dir)
