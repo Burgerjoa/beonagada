@@ -9,7 +9,6 @@ public class Enemy_Base : MonoBehaviour
 
     public int maxHp;
     public int nowHp;
-    public int atkDmg;
     public int atkSpeed;
     public Player slime;
     Image nowHpbar;
@@ -74,7 +73,7 @@ public class Enemy_Base : MonoBehaviour
         }
         
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage)//적 체력 0일 때 사라짐
     {
         nowHp = nowHp - damage;
     }
