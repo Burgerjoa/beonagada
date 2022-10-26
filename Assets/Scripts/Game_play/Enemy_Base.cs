@@ -76,6 +76,7 @@ public class Enemy_Base : MonoBehaviour
     public void TakeDamage(int damage)//적 체력 0일 때 사라짐
     {
         nowHp = nowHp - damage;
+        Destroy(gameObject);
     }
 
     IEnumerator Knockback(float dir)

@@ -111,6 +111,7 @@ public class CharacterBase : MonoBehaviour
         Debug.Log(_currentExp);
         if(UI.curHp<= 0)
         {
+            Destroy(gameObject);
             anim.SetBool("Death", true);
         }
         else

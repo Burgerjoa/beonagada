@@ -37,6 +37,7 @@ public class UI : MonoBehaviour
         
         if(curHp <=0 )
         {
+            Destroy(hpbar.gameObject);
            
             GameOverScreen.SetActive(true);
 
