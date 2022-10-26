@@ -8,7 +8,6 @@ public class UI : MonoBehaviour
 {
     [SerializeField]
     private Slider hpbar;
-    public Text gameoverText;
     public static float maxHp = 50;
     public static float curHp = 50;
     public static float imsi;
@@ -38,6 +37,7 @@ public class UI : MonoBehaviour
         
         if(curHp <=0 )
         {
+            Destroy(hpbar.gameObject);
            
             GameOverScreen.SetActive(true);
 

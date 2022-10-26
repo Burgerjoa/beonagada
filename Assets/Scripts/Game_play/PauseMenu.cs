@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
     {   //sum menu
         if(Input.GetButtonDown("Cancel"))
         {
+           
            if(menuSet.activeSelf)
               menuSet.SetActive(false);
            else 

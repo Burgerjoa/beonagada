@@ -26,7 +26,6 @@ public class CharacterBase : MonoBehaviour
     private float _maxExp;
     bool Death = false;
     
-    
     Color halfA = new Color(1, 1, 1, 0.5f);
     Color fullA = new Color(1, 1, 1, 1);
 
@@ -49,6 +48,8 @@ public class CharacterBase : MonoBehaviour
         back=GameObject.Find("Canvas").GetComponent<BackGauge>();
 
         _playerRigidbody = GetComponent<Rigidbody2D>();
+
+        
 
         //HP = barb.HP;
         Damage = barb.Damage;
@@ -108,6 +109,18 @@ public class CharacterBase : MonoBehaviour
 
         }
         Debug.Log(_currentExp);
+        if(UI.curHp<= 0)
+        {
+            Destroy(gameObject);
+            anim.SetBool("Death", true);
+        }
+        else
+        {
+            new WaitForSeconds(1f);
+            anim.SetBool("Attack", true);
+        }
+
+      
     }
     
 
@@ -160,13 +173,6 @@ public class CharacterBase : MonoBehaviour
                 StartCoroutine(alphablink());
             }
         }
-    }
-    public void isDeath()
-    {
-        anim.SetBool("Death", true);
-        Death = true;
-        Speed = 0;
-
     }
 
     IEnumerator Knockback(float dir)
