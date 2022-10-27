@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Effect : MonoBehaviour
 {
+    [SerializeField]
+    public GameObject Fireball;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,7 @@ public class Effect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Time.timeScale = 1f;
         
     }
 }

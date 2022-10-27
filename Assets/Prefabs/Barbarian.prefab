@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1893211372891324778}
   - component: {fileID: 8531001131503858674}
   - component: {fileID: -7281596786518795495}
+  - component: {fileID: -8228513813358922237}
   m_Layer: 0
   m_Name: Barbarian
   m_TagString: Player
@@ -193,6 +194,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-8228513813358922237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893211372891324759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc1bfc02f97bda4fbab5cfe0c502207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fireball: {fileID: 2725582664459735670, guid: 89e32d33ca639ea48b95f8cb09f3e7bd, type: 3}
 --- !u!1 &4912575646723788398
 GameObject:
   m_ObjectHideFlags: 0
