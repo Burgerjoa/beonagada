@@ -59,7 +59,7 @@ public class CharacterBase : MonoBehaviour
         Range = barb.Range;
         backGauge = back.maxBackgauge;
         _currentExp = 0;
-        
+        _maxExp = Mathf.Pow(1.2f,_level);
         
         if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
         {
