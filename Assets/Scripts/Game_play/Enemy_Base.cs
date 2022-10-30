@@ -24,17 +24,21 @@ public class Enemy_Base : MonoBehaviour
 
     void Start()
     {
-      rigid=GetComponent<Rigidbody2D>();
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(-0.002f,0,0);
-        if(nowHp <= 0)
+        if (Define.isPause == false)
         {
-            Destroy(this.gameObject);
+            transform.Translate(-0.002f,0,0);
+            if(nowHp <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
+
 
     }
     [FormerlySerializedAs("sword_man")] public Player player;

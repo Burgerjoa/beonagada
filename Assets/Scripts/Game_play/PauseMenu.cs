@@ -14,12 +14,22 @@ public class PauseMenu : MonoBehaviour
     {   //sum menu
         if(Input.GetButtonDown("Cancel"))
         {
-           
-           if(menuSet.activeSelf)
-              menuSet.SetActive(false);
-           else 
-              menuSet.SetActive(true);
+
+            if (menuSet.activeSelf)
+            {
+                menuSet.SetActive(false);
+                Time.timeScale = 1f;
+                Define.isPause = false;
+            }
+           else
+           {
+                Debug.LogError("open menu");
+                Define.isPause = true;
+                menuSet.SetActive(true);
+                Time.timeScale = 0f;
+           }
         }
+        Debug.LogWarning("scale : " + Time.timeScale);
     } 
     public void GameExit()
     {

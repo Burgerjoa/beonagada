@@ -25,16 +25,16 @@ public class CharacterBase : MonoBehaviour
     private float _maxExp;
     bool Death = false;
 
-    UI ui;
+    public UI ui;
     
     Color halfA = new Color(1, 1, 1, 0.5f);
     Color fullA = new Color(1, 1, 1, 1);
 
-    public float CurBackGauge{
-        get{
+    public float CurBackGauge {
+        get {
             return curbackGauge;
-        }set{
-            curbackGauge=value;
+        } set {
+            curbackGauge = value;
             back.HandleBackgauge(curbackGauge);
         }
     }
@@ -46,7 +46,7 @@ public class CharacterBase : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        back=GameObject.Find("Canvas").GetComponent<BackGauge>();
+        back = GameObject.Find("Canvas").GetComponent<BackGauge>();
         ui = GameObject.Find("Canvas").GetComponent<UI>();
         _playerRigidbody = GetComponent<Rigidbody2D>();
 
@@ -62,13 +62,17 @@ public class CharacterBase : MonoBehaviour
         Speed  = barb.Speed;
         Deffence = barb.Def;
         Range = barb.Range;
-        backGauge = back.maxBackgauge;
+        if (back != null)
+        {
+            backGauge = back.maxBackgauge;
+        }
         _currentExp = 0;
         
         
         if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
         {
-            //anim.SetBool("Run", true);
+            anim.SetBool("Run", true);
+            anim.SetBool("isSelect", false);
         }
 
         StartCoroutine("AttackAnimation");
@@ -76,54 +80,56 @@ public class CharacterBase : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Define.isPause == false)
         {
-            Back = true;
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            Back = false;
-        }
-        if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
-        {
-            if (Back == false)
+            if (Input.GetMouseButton(0))
             {
-                Move();
-                //Debug.Log($"CurBackGauge = {CurBackGauge}, backGauge = {backGauge}");
-                if (CurBackGauge <= backGauge)
-                {
-                    CurBackGauge += Time.deltaTime;
+                Back = true;
+            }
 
+            if (Input.GetMouseButtonUp(0))
+            {
+                Back = false;
+            }
+            if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
+            {
+                if (Back == false)
+                {
+                    Move();
+                    //Debug.Log($"CurBackGauge = {CurBackGauge}, backGauge = {backGauge}");
+                    if (CurBackGauge <= backGauge)
+                    {
+                        CurBackGauge += Time.deltaTime;
+
+                    }
                 }
+                else
+                {
+                    Back_Move();
+                }
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                _currentExp += 5;
+            }
+
+            if (_currentExp >= _maxExp)
+            {
+                _level++;
+                _maxExp = Mathf.Pow(1.2f, _level);
+                _currentExp = 0;
+
+            }
+            Debug.Log(_currentExp);
+            if (ui != null && ui.curHp <= 0)
+            {
+                Destroy(gameObject);
             }
             else
             {
-                Back_Move();
+                //anim.SetBool("Attack", true);
             }
-        }
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            _currentExp += 5;
-        }
-
-        if (_currentExp >= _maxExp)
-        {
-            _level++;
-            _maxExp = Mathf.Pow(1.2f,_level);
-            _currentExp = 0;
-
-        }
-        Debug.Log(_currentExp);
-        if(ui.curHp<= 0)
-        {
-            //Destroy(gameObject);
-            anim.SetBool("Death", true);
-        }
-        else
-        {
-            //anim.SetBool("Attack", true);
         }
     }
 
@@ -131,17 +137,20 @@ public class CharacterBase : MonoBehaviour
     {
         while (true)
         {
-            anim.SetBool("Run", true);
+            //anim.SetBool("Run", true);
             anim.SetBool("Attack", false);
-            yield return new WaitForSeconds(3f);
-            anim.SetBool("Run", false);
+            yield return new WaitForSeconds(1f);
+            //anim.SetBool("Run", false);
             anim.SetBool("Attack", true);
+            yield return new WaitForSeconds(0.2f);
         }
     }
     
     public void Move()
     {
-        transform.Translate(0.002f*Speed,0,0);
+        transform.Translate(0.002f * Speed, 0, 0);
+        //Vector3 dir = Vector3.right;
+        //transform.position += dir * Speed * Time.deltaTime;
         transform.localScale = new Vector3(1, 1, 1); // 왼쪽 바라보기
     }
 

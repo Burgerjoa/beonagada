@@ -15,7 +15,7 @@ public class Effect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
         
     }
 }
