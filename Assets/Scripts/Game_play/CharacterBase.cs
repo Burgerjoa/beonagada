@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class CharacterBase : MonoBehaviour
 {
-    public float HP;
     public float Damage;
     float AttackSpeed;
     public float Speed;
@@ -25,6 +24,8 @@ public class CharacterBase : MonoBehaviour
     public static int _level;
     private float _maxExp;
     bool Death = false;
+
+    UI ui;
     
     Color halfA = new Color(1, 1, 1, 0.5f);
     Color fullA = new Color(1, 1, 1, 1);
@@ -46,11 +47,15 @@ public class CharacterBase : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         back=GameObject.Find("Canvas").GetComponent<BackGauge>();
-
+        ui = GameObject.Find("Canvas").GetComponent<UI>();
         _playerRigidbody = GetComponent<Rigidbody2D>();
 
-        
-
+        #region ㅁㅁㅁㅁ
+        /* 캐릭터별로 hp다르게 할때
+        ui.curHp = ui.maxHp = 100;
+        ui.HandleHp();
+        */
+        #endregion
         //HP = barb.HP;
         Damage = barb.Damage;
         AttackSpeed = barb.AttackSpeed;
@@ -59,12 +64,14 @@ public class CharacterBase : MonoBehaviour
         Range = barb.Range;
         backGauge = back.maxBackgauge;
         _currentExp = 0;
-        _maxExp = Mathf.Pow(1.2f,_level);
+        
         
         if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
         {
-            anim.SetBool("Run", true);
+            //anim.SetBool("Run", true);
         }
+
+        StartCoroutine("AttackAnimation");
     }
 
     private void Update()
@@ -109,26 +116,29 @@ public class CharacterBase : MonoBehaviour
 
         }
         Debug.Log(_currentExp);
-        if(UI.curHp<= 0)
+        if(ui.curHp<= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             anim.SetBool("Death", true);
         }
         else
         {
-            new WaitForSeconds(1f);
+            //anim.SetBool("Attack", true);
+        }
+    }
+
+    IEnumerator AttackAnimation()
+    {
+        while (true)
+        {
+            anim.SetBool("Run", true);
+            anim.SetBool("Attack", false);
+            yield return new WaitForSeconds(3f);
+            anim.SetBool("Run", false);
             anim.SetBool("Attack", true);
         }
-
-      
     }
     
-
-
-    //IEnumerator Attack_Speed()
-    //{
-        
-    //}
     public void Move()
     {
         transform.Translate(0.002f*Speed,0,0);
@@ -144,6 +154,7 @@ public class CharacterBase : MonoBehaviour
             CurBackGauge -= 2*Time.deltaTime;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("EnemyAtk"))
@@ -157,17 +168,14 @@ public class CharacterBase : MonoBehaviour
         if(!isHurt)
         {   
             isHurt = true;
-            HP = HP - damage;
-            if(HP<=0)
-            {               
-            }
-            else
-            {               
+            ui.HitPlayer();
+            if (ui.curHp != 0)
+            {
                 float x = transform.position.x - pos.x;
-                if(x<0)
-                   x = 1;
+                if (x < 0)
+                    x = 1;
                 else
-                   x = -1;
+                    x = -1;
                 StartCoroutine(Knockback(x));
                 StartCoroutine(HurtRoutine());
                 StartCoroutine(alphablink());
@@ -175,6 +183,7 @@ public class CharacterBase : MonoBehaviour
         }
     }
 
+    #region 피격 관련 코루틴
     IEnumerator Knockback(float dir)
     {   
         isknockback = true;
@@ -204,8 +213,8 @@ public class CharacterBase : MonoBehaviour
 
     IEnumerator HurtRoutine()
     {   
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         isHurt = false;
     }
-
+    #endregion
 }

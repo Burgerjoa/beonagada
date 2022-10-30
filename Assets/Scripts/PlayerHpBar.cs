@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHpBar : MonoBehaviour
@@ -42,7 +42,7 @@ public class PlayerHpBar : MonoBehaviour
     {
         //transform.position = player.position;
         hpBar.value = currentHp / maxHp;
-        
+        playerHpText.text = "" + currentHp;
     }
 
     public void GetHpBoost ( )
