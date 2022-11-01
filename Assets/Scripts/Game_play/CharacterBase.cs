@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class CharacterBase : MonoBehaviour
 {
+    public Transform pos;
+    public Vector2 boxSize;
     public float Damage;
     float AttackSpeed;
     public float Speed;
@@ -73,6 +75,7 @@ public class CharacterBase : MonoBehaviour
         {
             anim.SetBool("Run", true);
             anim.SetBool("isSelect", false);
+            
         }
 
         StartCoroutine("AttackAnimation");
@@ -108,6 +111,7 @@ public class CharacterBase : MonoBehaviour
                     Back_Move();
                 }
             }
+            
 
             if (Input.GetMouseButtonDown(1))
             {
@@ -135,14 +139,16 @@ public class CharacterBase : MonoBehaviour
 
     IEnumerator AttackAnimation()
     {
-        while (true)
+        if (SceneManager.GetActiveScene().name == "Play")
+            while (true)
         {
             //anim.SetBool("Run", true);
             anim.SetBool("Attack", false);
             yield return new WaitForSeconds(1f);
-            //anim.SetBool("Run", false);
-            anim.SetBool("Attack", true);
-            yield return new WaitForSeconds(0.2f);
+                //anim.SetBool("Run", false);
+                anim.SetBool("Attack", true);
+                
+                    yield return new WaitForSeconds(0.2f);
         }
     }
     
@@ -190,6 +196,11 @@ public class CharacterBase : MonoBehaviour
                 StartCoroutine(alphablink());
             }
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(pos.position, boxSize);
     }
 
     #region 피격 관련 코루틴
