@@ -166,12 +166,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd8d51329ba8da4ea947a5d06d00633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 50
+  pos: {fileID: 3728767186967557041, guid: 8b9f79de49cd31d4993e861b5e97da1d, type: 3}
+  boxSize: {x: 1, y: 1.43}
   Damage: 1
   Speed: 10
   Back: 0
   backGauge: 0
   curbackGauge: 10
+  ui: {fileID: 0}
 --- !u!50 &-7281596786518795495
 Rigidbody2D:
   serializedVersion: 4

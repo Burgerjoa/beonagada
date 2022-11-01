@@ -8,19 +8,20 @@ public class UI : MonoBehaviour
 {
     [SerializeField]
     private Slider hpbar;
-    public static float maxHp = 50;
-    public static float curHp = 50;
-    public static float imsi;
-    public static bool damaged_by_player = true;
+    public float maxHp = 50;
+    public float curHp = 50;
+    public float imsi;
+    public bool damaged_by_player = true;
     public GameObject GameOverScreen;
 
-    void start()
+    void Start()
     {
         hpbar.value = (float) curHp / (float) maxHp;
     }
     
     void Update()
     {
+        // 피달기 테스트용
         if(Input.GetKeyDown(KeyCode.Space))
         {
             if(curHp > 0)
@@ -63,7 +64,7 @@ public class UI : MonoBehaviour
         HandleHp();
     } 
 
-    private void HandleHp()
+    public void HandleHp()
     {
         //hpbar.value = Mathf.Lerp(hpbar.value, (float) curHp / (float) maxHp, Time.deltaTime * 10) ;
         hpbar.value = (float)curHp / (float)maxHp;
