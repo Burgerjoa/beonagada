@@ -160,7 +160,8 @@ public class CharacterBase : MonoBehaviour
     
     public void Move()
     {
-        transform.Translate(0.002f * Speed, 0, 0);
+        transform.Translate(0.5f * Speed*Time.deltaTime, 0, 0);
+        Debug.Log(Time.deltaTime);
         //Vector3 dir = Vector3.right;
         //transform.position += dir * Speed * Time.deltaTime;
         transform.localScale = new Vector3(1, 1, 1); // 왼쪽 바라보기
@@ -170,7 +171,7 @@ public class CharacterBase : MonoBehaviour
     {
         if (CurBackGauge>=0)
         {
-            transform.Translate(-0.002f * Speed, 0, 0);
+            transform.Translate(-0.5f * Speed*Time.deltaTime, 0, 0);
             transform.localScale = new Vector3(-1, 1, 1); // 왼쪽 바라보기
             CurBackGauge -= 2*Time.deltaTime;
         }
