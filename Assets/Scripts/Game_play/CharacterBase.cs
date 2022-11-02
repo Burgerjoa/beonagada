@@ -148,17 +148,13 @@ public class CharacterBase : MonoBehaviour
                 anim.SetBool("Attack", true);
                 if (anim.GetBool("Attack"))
                 {
-                    Collider2D collider2Ds = Physics2D.OverlapBox(pos.position, boxSize, 0);
-                    
-                    
+                    Collider2D collider2Ds = Physics2D.OverlapBox(pos.position, boxSize, 0);              
                         if(collider2Ds.tag == "Enemy")
                         {
                             collider2Ds.GetComponent<Enemy_Base>().TakeDamage(1);
-                        }
-                    
-                }        
-            
-            yield return new WaitForSeconds(0.2f);
+                        }                 
+                }
+                yield return new WaitForSeconds(0.2f);
         }
     }
     
