@@ -26,7 +26,6 @@ public class CharacterBase : MonoBehaviour
     public static int _level;
     private float _maxExp;
     bool Death = false;
-
     public UI ui;
     
     Color halfA = new Color(1, 1, 1, 0.5f);
@@ -147,8 +146,19 @@ public class CharacterBase : MonoBehaviour
             yield return new WaitForSeconds(1f);
                 //anim.SetBool("Run", false);
                 anim.SetBool("Attack", true);
-                
-                    yield return new WaitForSeconds(0.2f);
+                if (anim.GetBool("Attack"))
+                {
+                    Collider2D collider2Ds = Physics2D.OverlapBox(pos.position, boxSize, 0);
+                    
+                    
+                        if(collider2Ds.tag == "Enemy")
+                        {
+                            collider2Ds.GetComponent<Enemy_Base>().TakeDamage(1);
+                        }
+                    
+                }        
+            
+            yield return new WaitForSeconds(0.2f);
         }
     }
     

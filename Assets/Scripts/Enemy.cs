@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -51,4 +52,8 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawWireCube(pos.position, new Vector3(1f, 1f, 1f));
     }
 
+    internal void TakeDamage(int v)
+    {
+        throw new NotImplementedException();
+    }
 }

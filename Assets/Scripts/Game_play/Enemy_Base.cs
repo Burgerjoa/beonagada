@@ -3,16 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
-using UnityEngine.UI; // Image 자료형을 위해 using 해줘야 함
+/*using UnityEngine.UI;*/ // Image 자료형을 위해 using 해줘야 함
 public class Enemy_Base : MonoBehaviour
 {
 
-    public int maxHp;
-    public int nowHp;
-    public int atkSpeed;
+    public int Hp = 3;
     public Player slime;
-    Image nowHpbar;
-    private RectTransform hpBar;
     private bool ishurt = false;
 
     public float speed;
@@ -33,7 +29,7 @@ public class Enemy_Base : MonoBehaviour
         if (Define.isPause == false)
         {
             transform.Translate(-0.002f,0,0);
-            if(nowHp <= 0)
+            if(Hp <= 0)
             {
                 Destroy(this.gameObject);
             }
@@ -60,7 +56,7 @@ public class Enemy_Base : MonoBehaviour
         if (!ishurt)
         {
             ishurt = true;
-            if (nowHp <= 0)// 적 사망
+            if (Hp <= 0)// 적 사망
             {
             }
             else
@@ -79,7 +75,7 @@ public class Enemy_Base : MonoBehaviour
     }
     public void TakeDamage(int damage)//적 체력 0일 때 사라짐
     {
-        nowHp = nowHp - damage;
+        Hp = Hp - damage;
         Destroy(gameObject);
     }
 
