@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
+    public static UI Instance;
+    private static UI instance;
     [SerializeField]
     private Slider hpbar;
     public float maxHp = 50;
@@ -13,6 +15,11 @@ public class UI : MonoBehaviour
     public float imsi;
     public bool damaged_by_player = true;
     public GameObject GameOverScreen;
+    public GameObject SlotMachineGo;
+    public GameObject EndGameGo;
+
+    public Text PlayerExpBar;
+    public Text PlayerLvText;
 
     void Start()
     {
@@ -63,6 +70,17 @@ public class UI : MonoBehaviour
 
         HandleHp();
     } 
+    public void PlayerLvUp(bool isSlotMachineOn)
+    {
+        if(isSlotMachineOn)
+        {
+            SlotMachineGo.SetActive(true);
+        }
+        else
+        {
+            SlotMachineGo.SetActive(false);
+        }
+    }
 
     public void HandleHp()
     {

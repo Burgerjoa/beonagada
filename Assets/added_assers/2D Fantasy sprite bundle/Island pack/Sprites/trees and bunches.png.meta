@@ -2881,7 +2881,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      trees and bunches_9: 21300018
+      trees and bunches_7: 21300014
       trees and bunches_4: 21300008
       trees and bunches_27: 21300054
       trees and bunches_23: 21300046
@@ -2912,8 +2912,8 @@ TextureImporter:
       trees and bunches_22: 21300044
       trees and bunches_28: 21300056
       trees and bunches_13: 21300026
-      trees and bunches_7: 21300014
       trees and bunches_8: 21300016
+      trees and bunches_9: 21300018
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
