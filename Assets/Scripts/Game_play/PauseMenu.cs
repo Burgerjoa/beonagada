@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+
     public GameObject menuSet;
     void Start()
     {
-       
+
     }
 
     void Update()
     {   //sum menu
-        if(Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel"))
         {
 
             if (menuSet.activeSelf)
@@ -21,18 +22,25 @@ public class PauseMenu : MonoBehaviour
                 Time.timeScale = 1f;
                 Define.isPause = false;
             }
-           else
-           {
+            else
+            {
                 Debug.LogError("open menu");
                 Define.isPause = true;
                 menuSet.SetActive(true);
                 Time.timeScale = 0f;
-           }
+            }
         }
+
         Debug.LogWarning("scale : " + Time.timeScale);
-    } 
+    }
     public void GameExit()
     {
         Application.Quit();
+    }
+    public void Resume()
+    {
+        menuSet.SetActive(false);
+        Time.timeScale = 1f;
+        Define.isPause = false;
     }
 }

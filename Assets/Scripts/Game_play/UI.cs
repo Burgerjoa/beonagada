@@ -10,8 +10,8 @@ public class UI : MonoBehaviour
     private static UI instance;
     [SerializeField]
     private Slider hpbar;
-    public float maxHp = 50;
-    public float curHp = 50;
+    public static float maxHp = 50;
+    public static float curHp = 50;
     public float imsi;
     public bool damaged_by_player = true;
     public GameObject GameOverScreen;

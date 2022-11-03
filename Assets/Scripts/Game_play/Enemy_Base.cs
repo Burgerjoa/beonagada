@@ -31,8 +31,9 @@ public class Enemy_Base : MonoBehaviour
             transform.Translate(-0.002f,0,0);
             if(Hp <= 0)
             {
-
                 
+
+
                 Destroy(this.gameObject);
             }
         }

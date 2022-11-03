@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class CharacterBase : MonoBehaviour
 {
+    public int PlayerLv;
+    public float CurExp;
+    public float PlayerExp = 100f;
     public Transform pos;
     public Vector2 boxSize;
     public float Damage;
@@ -22,11 +25,11 @@ public class CharacterBase : MonoBehaviour
     bool isHurt;
     private bool isknockback= false;
     SpriteRenderer sr;
-    private float _currentExp;
     public static int _level;
     private float _maxExp;
     bool Death = false;
     public UI ui;
+   
     
     Color halfA = new Color(1, 1, 1, 0.5f);
     Color fullA = new Color(1, 1, 1, 1);
@@ -67,7 +70,6 @@ public class CharacterBase : MonoBehaviour
         {
             backGauge = back.maxBackgauge;
         }
-        _currentExp = 0;
         
         
         if (SceneManager.GetActiveScene().name == "Play") // 셀렉트 씬에서만 작동
@@ -112,27 +114,11 @@ public class CharacterBase : MonoBehaviour
             }
             
 
-            if (Input.GetMouseButtonDown(1))
-            {
-                _currentExp += 5;
-            }
-
-            if (_currentExp >= _maxExp)
-            {
-                _level++;
-                _maxExp = Mathf.Pow(1.2f, _level);
-                _currentExp = 0;
-
-            }
-            Debug.Log(_currentExp);
-            if (ui != null && ui.curHp <= 0)
-            {
-                Destroy(gameObject);
-            }
-            else
-            {
-                //anim.SetBool("Attack", true);
-            }
+            
+        }
+        if(UI.curHp <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -141,8 +127,9 @@ public class CharacterBase : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Play")
             while (true)
         {
-            //anim.SetBool("Run", true);
-            anim.SetBool("Attack", false);
+                
+                //anim.SetBool("Run", true);
+                anim.SetBool("Attack", false);
             yield return new WaitForSeconds(1f);
                 //anim.SetBool("Run", false);
                 anim.SetBool("Attack", true);
@@ -190,7 +177,7 @@ public class CharacterBase : MonoBehaviour
         {   
             isHurt = true;
             ui.HitPlayer();
-            if (ui.curHp != 0)
+            if (UI.curHp != 0)
             {
                 float x = transform.position.x - pos.x;
                 if (x < 0)
