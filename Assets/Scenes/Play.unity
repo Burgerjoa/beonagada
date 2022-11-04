@@ -1902,7 +1902,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &405294573
 MonoBehaviour:
@@ -1916,8 +1916,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf788622ea591544baf7286589efa41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterDmgEffect: {fileID: 0}
-  PlayerLevelUpEffect: {fileID: 5072769402150474424}
 --- !u!1 &450717932
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,9 +2678,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569d1b6905f087a4895197effb254153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 1
   Player: {fileID: 1893211372891324759, guid: 5739396e16c9a4947b937c009b35b4fd, type: 3}
   FireBall: {fileID: 0}
+  ItemExp: {fileID: 0}
   PlayerSkill: 
   PlayerLv: 1
   PlayerCurrentExp: 0
@@ -6992,7 +6990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd2e8874f60266498a388d7229a1bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnlyDeactivate: 0
 --- !u!4 &5072769402150178456
 Transform:
   m_ObjectHideFlags: 0
@@ -7009,7 +7006,7 @@ Transform:
   - {fileID: 5072769402150178460}
   - {fileID: 5072769402150178458}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5072769402150178458
 Transform:
