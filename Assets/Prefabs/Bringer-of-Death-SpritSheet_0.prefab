@@ -259,9 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724a920bfd7cd1d48b53235e9f8df80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 10000
-  nowHp: 10000
-  atkSpeed: 0
+  Hp: 3
   slime: {fileID: 0}
   speed: 0
   player: {fileID: 0}
