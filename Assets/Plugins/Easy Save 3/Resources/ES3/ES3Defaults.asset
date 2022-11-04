@@ -40,6 +40,8 @@ MonoBehaviour:
     - Nementic.SelectionUtility.Editor
     - Febucci.TextAnimator.Demo.Editor
     - Febucci.TextAnimator.Editor
+    - Sirenix.OdinInspector.Modules.UnityMathematics
+    - JetBrains.Frontend.2021.2
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
