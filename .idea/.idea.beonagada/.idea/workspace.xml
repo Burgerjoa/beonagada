@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4df7675-ec75-4055-acac-569fd24bd8ea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Image/Quibli/Post Process/Effects/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/Quibli/Post Process/Effects/Scripts/ColorGrading.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/Quibli/Post Process/Effects/Scripts/ColorGrading.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/Quibli/Post Process/Effects/Scripts/StylizedDetail.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/Quibli/Post Process/Effects/Scripts/StylizedDetail.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSysytem/inventorySlotSataeChangedArgs.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSysytem/inventorySlotSataeChangedArgs.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.beonagada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.beonagada/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSysytem/InventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSysytem/InventorySlot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +124,7 @@
       <workItem from="1666780178430" duration="401000" />
       <workItem from="1667295789553" duration="1729000" />
       <workItem from="1667384799848" duration="4165000" />
-      <workItem from="1667580650801" duration="724000" />
+      <workItem from="1667580650801" duration="2417000" />
     </task>
     <servers />
   </component>
