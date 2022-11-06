@@ -7,9 +7,6 @@ using UnityEngine.UI;
 
 public class CharacterBase : MonoBehaviour
 {
-    public int PlayerLv;
-    public float CurExp;
-    public float PlayerExp = 100f;
     public Transform pos;
     public Vector2 boxSize;
     public float Damage;
@@ -26,9 +23,11 @@ public class CharacterBase : MonoBehaviour
     private bool isknockback= false;
     SpriteRenderer sr;
     public static int _level;
-    private float _maxExp;
+    
     bool Death = false;
     public UI ui;
+
+    bool isAtk = true;
    
     
     Color halfA = new Color(1, 1, 1, 0.5f);
@@ -125,30 +124,54 @@ public class CharacterBase : MonoBehaviour
     IEnumerator AttackAnimation()
     {
         if (SceneManager.GetActiveScene().name == "Play")
-            while (true)
         {
-                
-                //anim.SetBool("Run", true);
-                anim.SetBool("Attack", false);
-            yield return new WaitForSeconds(1f);
-                //anim.SetBool("Run", false);
+            while (true)
+            {
+                //isAtk = true;
                 anim.SetBool("Attack", true);
-                if (anim.GetBool("Attack"))
-                {
-                    Collider2D collider2Ds = Physics2D.OverlapBox(pos.position, boxSize, 0);              
-                        if(collider2Ds.tag == "Enemy")
-                        {
-                            collider2Ds.GetComponent<Enemy_Base>().TakeDamage(1);
-                        }                 
-                }
-                yield return new WaitForSeconds(0.2f);
+                //if (anim.GetBool("Attack"))
+                //{
+                //    Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+                //    foreach (var item in collider2Ds)
+                //    {
+                //        if(item!=null && item.tag.Equals("Enemy") && isAtk)
+                //        {
+                //            Debug.LogWarning("isatk");
+                //            isAtk = false;
+                //            item.GetComponent<Enemy_Base>().TakeDamage(1);
+                //        }
+                //    }
+                //}
+                //yield return new WaitForSeconds(1f);
+                //isAtk = true;
+                yield return null;
+            }
         }
+    }
+
+    public void AtkLogic()
+    {
+        if (SceneManager.GetActiveScene().name == "Select")
+        {
+            return;
+        }
+        
+        Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+        foreach (var item in collider2Ds)
+        {
+            if (item != null && item.tag.Equals("Enemy") && isAtk)
+            {
+                Debug.LogWarning("isatk");
+                isAtk = false;
+                item.GetComponent<Enemy_Base>().TakeDamage(1);
+            }
+        }
+        isAtk = true;
     }
     
     public void Move()
     {
         transform.Translate(0.5f * Speed*Time.deltaTime, 0, 0);
-        Debug.Log(Time.deltaTime);
         //Vector3 dir = Vector3.right;
         //transform.position += dir * Speed * Time.deltaTime;
         transform.localScale = new Vector3(1, 1, 1); // 왼쪽 바라보기
