@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4df7675-ec75-4055-acac-569fd24bd8ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSysytem/inventorySlotSataeChangedArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSysytem/inventorySlotSataeChangedArgs.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSysytem/InventoryException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSysytem/InventoryException.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.beonagada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.beonagada/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSysytem/InventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSysytem/InventorySlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +23,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game_play/Enemy_Base.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game_play/Range.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemSysytem/GameItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemSysytem/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemSysytem/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemSysytem/ItemDefinition.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -125,6 +129,8 @@
       <workItem from="1667295789553" duration="1729000" />
       <workItem from="1667384799848" duration="4165000" />
       <workItem from="1667580650801" duration="2417000" />
+      <workItem from="1667670201220" duration="2238000" />
+      <workItem from="1667672898679" duration="1351000" />
     </task>
     <servers />
   </component>
