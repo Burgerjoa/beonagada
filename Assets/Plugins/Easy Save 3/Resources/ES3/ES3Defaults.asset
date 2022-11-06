@@ -38,6 +38,7 @@ MonoBehaviour:
     - Nementic.SelectionUtility.Runtime
     - PsdPlugin
     - Febucci.TextAnimator.Editor
+    - JetBrains.Frontend.2021.2
     - Nementic.SelectionUtility.Editor
     - Febucci.TextAnimator.Demo.Editor
     - Sirenix.OdinInspector.Modules.UnityMathematics
