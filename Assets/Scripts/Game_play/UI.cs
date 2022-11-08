@@ -52,7 +52,7 @@ public class UI : MonoBehaviour
 
     public static float maxHp = 500;
     public static float curHp = 500;
-    public float imsi;
+    public float imsiHp;
     public bool damaged_by_player = true;
     public GameObject GameOverScreen;
     public GameObject SlotMachineGo;
@@ -79,7 +79,7 @@ public class UI : MonoBehaviour
             {
                 curHp = 0;
             }
-            imsi = (float)curHp / (float)maxHp;
+            imsiHp = (float)curHp / (float)maxHp;
             HandleHp();
         }
         
@@ -106,7 +106,7 @@ public class UI : MonoBehaviour
             {
                 curHp = 0;
             }
-            imsi = (float)curHp / (float)maxHp;
+            imsiHp = (float)curHp / (float)maxHp;
         }
 
         HandleHp();

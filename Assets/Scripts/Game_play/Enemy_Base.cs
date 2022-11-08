@@ -24,7 +24,7 @@ public class Enemy_Base : MonoBehaviour
                 if (hp <= 0)
                 {
                     Debug.LogWarning("Enemy Die");
-                    ui.CurExp += 100f;
+                    ui.CurExp += 50f;
                     Destroy(this.gameObject);
                 }
             }
