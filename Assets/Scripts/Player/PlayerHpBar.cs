@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHpBar : MonoBehaviour
@@ -50,13 +50,14 @@ public class PlayerHpBar : MonoBehaviour
         maxHp += 150;
         currentHp += 150;
         float scaleX = ( 1000f / currentHp ) / ( maxHp / currentHp );
-        /*HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( false );
-*/
+        *//*HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( false );
+*//*
         foreach ( Transform child in HpLineFolder.transform)
         {
             child.gameObject.transform.localScale = new Vector3 ( scaleX, 1, 1 );
         }
 
-/*        HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( true );*/
+*//*        HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( true );*//*
     }
 }
+*/

@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 namespace ItemSysytem
 {
@@ -22,3 +22,4 @@ namespace ItemSysytem
         
     }
 }
+*/
