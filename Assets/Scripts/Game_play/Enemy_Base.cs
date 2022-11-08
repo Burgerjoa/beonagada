@@ -7,8 +7,30 @@ using UnityEngine.Serialization;
 public class Enemy_Base : MonoBehaviour
 {
 
-    public int Hp = 3;
-    public Player slime;
+    [SerializeField]
+    private int hp = 3;
+
+    public int HP
+    {
+        get
+        {
+            return hp;
+        }
+        set
+        {
+            if (Define.isPause == false)
+            {
+                hp = value;
+                if (hp <= 0)
+                {
+                    Debug.LogWarning("Enemy Die");
+                    ui.CurExp += 100f;
+                    Destroy(this.gameObject);
+                }
+            }
+        }
+    }
+    
     private bool ishurt = false;
 
     public float speed;
@@ -17,10 +39,13 @@ public class Enemy_Base : MonoBehaviour
 
     private Rigidbody2D rigid;
 
+    public UI ui;
+
 
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
+        ui = GameObject.Find("Canvas").GetComponent<UI>();
     }
 
     // Update is called once per frame
@@ -29,13 +54,6 @@ public class Enemy_Base : MonoBehaviour
         if (Define.isPause == false)
         {
             transform.Translate(-0.002f,0,0);
-            if(Hp <= 0)
-            {
-                
-
-
-                Destroy(this.gameObject);
-            }
         }
 
 
@@ -59,8 +77,9 @@ public class Enemy_Base : MonoBehaviour
         if (!ishurt)
         {
             ishurt = true;
-            if (Hp <= 0)// 적 사망
+            if (HP <= 0)// 적 사망
             {
+                // TODO: 예외처리
             }
             else
             {
@@ -78,8 +97,7 @@ public class Enemy_Base : MonoBehaviour
     }
     public void TakeDamage(int damage)//적 체력 0일 때 사라짐
     {
-        Hp = Hp - damage;
-        Destroy(gameObject);
+        HP = HP - damage;
     }
 
     IEnumerator Knockback(float dir)

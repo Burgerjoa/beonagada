@@ -10,8 +10,48 @@ public class UI : MonoBehaviour
     private static UI instance;
     [SerializeField]
     private Slider hpbar;
-    public static float maxHp = 50;
-    public static float curHp = 50;
+    public Slider Expbar;
+    public int playerLv = 1;
+    [SerializeField]
+    private float curExp = 0f;
+    [SerializeField]
+    private float playerExp = 100f;
+
+    public float CurExp
+    {
+        get
+        {
+            return curExp;
+        }
+        set
+        {
+            curExp += value;
+            if (curExp >= playerExp)
+            {
+                Debug.LogWarning("LV UP");
+                curExp -= playerExp;
+                Time.timeScale = 0f;
+                Define.isPause = true;
+                PlayerLv++;
+            }
+        }
+    }
+
+    public float PlayerLv
+    {
+        get
+        {
+            return playerLv;
+        }
+        set
+        {
+            // TODO: 슬롯머신 관련
+            SlotMachineGo.SetActive(true);
+        }
+    }
+
+    public static float maxHp = 500;
+    public static float curHp = 500;
     public float imsi;
     public bool damaged_by_player = true;
     public GameObject GameOverScreen;
@@ -50,6 +90,7 @@ public class UI : MonoBehaviour
             GameOverScreen.SetActive(true);
 
         }
+       
         
     }
     public void HitPlayer()
