@@ -9,6 +9,7 @@ TagManager:
   - PlayerAttackRange
   - Enemy
   - EXP
+  - Items
   layers:
   - Default
   - TransparentFX

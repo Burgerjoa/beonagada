@@ -8,6 +8,8 @@ namespace ItemSysytem
         [SerializeField] private ItemStack _stack;
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
+        public ItemStack Stack => _stack;
+
         private void OnValidate()
         {
             SetupGameObject();
@@ -37,6 +39,11 @@ namespace ItemSysytem
         private void AdjustNumberOfItems()
         {
             _stack.NumberOfItems =  _stack.NumberOfItems;
+        }
+
+        public ItemStack Pick()
+        {
+            return _stack;
         }
 
     }

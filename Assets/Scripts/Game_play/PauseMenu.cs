@@ -32,7 +32,6 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        Debug.LogWarning("scale : " + Time.timeScale);
     }
     public void GameExit()
     {

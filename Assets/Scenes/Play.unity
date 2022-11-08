@@ -1637,7 +1637,7 @@ GameObject:
   - component: {fileID: 312656716}
   m_Layer: 0
   m_Name: Potion01 (ns)
-  m_TagString: Untagged
+  m_TagString: Items
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4636,7 +4636,7 @@ MonoBehaviour:
   playerLv: 1
   curExp: 0
   playerExp: 100
-  imsi: 0
+  imsiHp: 0
   damaged_by_player: 1
   GameOverScreen: {fileID: 1044122299}
   SlotMachineGo: {fileID: 662692244}
@@ -6225,6 +6225,8 @@ GameObject:
   - component: {fileID: 1740833082}
   - component: {fileID: 1740833081}
   - component: {fileID: 1740833080}
+  - component: {fileID: 1740833084}
+  - component: {fileID: 1740833083}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6250,7 +6252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58.112366, y: 70.26642}
+  m_AnchoredPosition: {x: 43, y: 87.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1740833080
@@ -6296,7 +6298,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1740833081}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1740833083}
+        m_TargetAssemblyTypeName: ItemSysytem.ItemCollisionHandler, Assembly-CSharp
+        m_MethodName: GetItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1740833081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6326,7 +6340,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 8.28
 --- !u!222 &1740833082
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6335,6 +6349,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740833078}
   m_CullTransparentMesh: 1
+--- !u!114 &1740833083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740833078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc49f71f3e554a82b13b1db31de4eaa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1740833084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740833078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9e14824b27d0b4a89d7a4c664d3d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _size: 8
+  _slots:
+  - _state:
+      _item: {fileID: 0}
+      _numberOfItmes: 0
+  - _state:
+      _item: {fileID: 0}
+      _numberOfItmes: 0
+  - _state:
+      _item: {fileID: 0}
+      _numberOfItmes: 0
+  - _state:
+      _item: {fileID: 0}
+      _numberOfItmes: 0
+  - _state:
+      _item: {fileID: 0}
+      _numberOfItmes: 0
+  - _state:
+      _item: {fileID: 0}
+      _numberOfItmes: 0
+  - _state:
+      _item: {fileID: 0}
+      _numberOfItmes: 0
+  - _state:
+      _item: {fileID: 0}
+      _numberOfItmes: 0
 --- !u!1 &1757563535
 GameObject:
   m_ObjectHideFlags: 0
