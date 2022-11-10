@@ -161,7 +161,7 @@ public class CharacterBase : MonoBehaviour
         {
             if (item != null && item.tag.Equals("Enemy") && isAtk)
             {
-                Debug.LogWarning("isatk");
+              
                 isAtk = false;
                 item.GetComponent<Enemy_Base>().TakeDamage(1);
             }
