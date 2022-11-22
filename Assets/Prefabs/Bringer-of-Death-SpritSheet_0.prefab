@@ -56,8 +56,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2447028278465437432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -0.2, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0.37, y: -0.2, z: 0}
+  m_LocalScale: {x: 0.39, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2447028279781116971}
@@ -259,9 +259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724a920bfd7cd1d48b53235e9f8df80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 3
-  slime: {fileID: 0}
+  hp: 3
   speed: 0
+  ui: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &2524726205296592129
 MonoBehaviour:
